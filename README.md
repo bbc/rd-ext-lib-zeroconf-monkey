@@ -44,9 +44,6 @@ See the original zeroconf library for further documentation.
 ```bash
 # Debian packaging
 $ make deb
-
-# RPM packaging
-$ make rpm
 ```
 
 ## License
