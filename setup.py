@@ -33,7 +33,7 @@ package_names = packages.keys()
 
 # REMEMBER: If this list is updated, please also update stdeb.cfg
 packages_required = [
-    "zeroconf>=0.17.6"
+    "zeroconf"
 ]
 
 setup(name="zeroconf_monkey",
