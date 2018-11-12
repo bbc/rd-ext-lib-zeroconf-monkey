@@ -1,4 +1,4 @@
-# zeroconf_monkey
+# zeroconf-monkey
 
 A thin wrapper on top of the Python module 'zeroconf'.
 
