@@ -18,7 +18,7 @@ Use of this module is not recommended unless absolutely required for your use ca
 
 ```bash
 # Install from pip
-$ pip install zeroconf_monkey
+$ pip install zeroconf-monkey
 
 # Inside BBC R&D? You can also do...
 $ apt-get install python-zeroconf-monkey
