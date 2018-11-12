@@ -36,7 +36,7 @@ packages_required = [
     "zeroconf"
 ]
 
-setup(name="zeroconf_monkey",
+setup(name="zeroconf-monkey",
       version="0.1.0",
       description="A thin wrapper on top of Zeroconf to override validation",
       url='https://github.com/bbc/zeroconf_monkey',
