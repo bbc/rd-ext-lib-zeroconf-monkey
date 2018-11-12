@@ -30,7 +30,7 @@ $ apt-get install python3-zeroconf-monkey
 ## Usage
 
 ```python
-from zeroconf_monkey import ZeroConf
+from zeroconf_monkey import Zeroconf
 
 ...
 ```
