@@ -49,4 +49,5 @@ setup(name="zeroconf_monkey",
       scripts=[],
       data_files=[],
       long_description="A thin wrapper on top of Zeroconf to override validation",
+      py_modules=['zeroconf_monkey']
       )
