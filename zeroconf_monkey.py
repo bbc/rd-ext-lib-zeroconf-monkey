@@ -16,11 +16,19 @@
     USA
 """
 
+# Import the base module to patch
 import zeroconf
+
+# Import all components of the module to re-export
 from zeroconf import *
 
-from zeroconf import BadTypeInNameException, _HAS_A_TO_Z
-from zeroconf import _HAS_ONLY_A_TO_Z_NUM_HYPHEN, _HAS_ASCII_CONTROL_CHARS
+# Import exceptions which aren't in __all__
+from zeroconf import IncomingDecodeError, NonUniqueNameException
+from zeroconf import NamePartTooLongException, AbstractMethodException
+from zeroconf import BadTypeInNameException
+
+# Import additional definitions required in the method below
+from zeroconf import _HAS_A_TO_Z, _HAS_ONLY_A_TO_Z_NUM_HYPHEN, _HAS_ASCII_CONTROL_CHARS
 
 
 # This file exists because we need to over-ride the original implementation in
@@ -121,9 +129,3 @@ try:
     zeroconf.service_type_name = service_type_name
 except AttributeError:
     pass
-
-__all__ = [
-    "__version__",
-    "Zeroconf", "ServiceInfo", "ServiceBrowser",
-    "Error", "InterfaceChoice", "ServiceStateChange",
-]
