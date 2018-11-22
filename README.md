@@ -1,6 +1,6 @@
 # zeroconf-monkey
 
-A thin wrapper on top of the Python module 'zeroconf'.
+A thin wrapper on top of the Python module 'zeroconf' available from https://github.com/jstasiak/python-zeroconf.
 
 ## Introduction
 

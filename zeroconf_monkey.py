@@ -1,3 +1,9 @@
+""" This file contains a copy of one function from the Python library
+    'zeroconf' hosted at https://github.com/jstasiak/python-zeroconf
+    Modifications were made by the British Broadcasting Corporation
+    in 2018.
+"""
+
 """ Multicast DNS Service Discovery for Python, v0.14-wmcbrine
     Copyright 2003 Paul Scott-Murphy, 2014 William McBrine
     This module provides a framework for the use of DNS Service Discovery
@@ -84,6 +90,11 @@ def service_type_name(type_, allow_underscores=False):
 
     # remove leading underscore
     name = name[1:]
+
+    # The following check was commented in order to disable name length validation
+    # if len(name) > 15:
+    #     raise BadTypeInNameException(
+    #     "Service name (%s) must be <= 15 bytes" % name)
 
     if '--' in name:
         raise BadTypeInNameException(
