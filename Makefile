@@ -49,7 +49,7 @@ $(topbuilddir)/dist:
 	mkdir -p $@
 
 deb_dist: $(topbuilddir)/dist/$(MODNAME)-$(VERSION).tar.gz
-	$(PY2DSC) --with-python2=true --with-python3=true $(topbuilddir)/dist/$(MODNAME)-$(VERSION).tar.gz
+	$(PY2DSC) --with-python2=false --with-python3=true $(topbuilddir)/dist/$(MODNAME)-$(VERSION).tar.gz
 
 $(DEBIANDIR)/%: $(topdir)/debian/% deb_dist
 	cp -r $< $@
@@ -62,11 +62,9 @@ deb: source deb_dist $(DEBIANOVERRIDES)
 	cp $(topbuilddir)/deb_dist/python*$(DEBNAME)_$(VERSION)-1*.deb $(topbuilddir)/dist
 
 wheel:
-	$(PYTHON2) $(topdir)/setup.py bdist_wheel --dist-dir=$(topbuilddir)/dist
 	$(PYTHON3) $(topdir)/setup.py bdist_wheel --dist-dir=$(topbuilddir)/dist
 
 egg:
-	$(PYTHON2) $(topdir)/setup.py bdist_egg --dist-dir=$(topbuilddir)/dist
 	$(PYTHON3) $(topdir)/setup.py bdist_egg --dist-dir=$(topbuilddir)/dist
 
 .PHONY: clean install source deb dsc wheel egg pex all

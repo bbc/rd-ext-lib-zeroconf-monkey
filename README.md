@@ -12,7 +12,7 @@ Use of this module is not recommended unless absolutely required for your use ca
 
 ### Requirements
 
-*   Python 2.7 or 3.3+
+*   Python 3.3+ (see v1.0.0 for Python 2.7)
 
 ### Steps
 
@@ -21,9 +21,6 @@ Use of this module is not recommended unless absolutely required for your use ca
 $ pip install zeroconf-monkey
 
 # Inside BBC R&D? You can also do...
-$ apt-get install python-zeroconf-monkey
-
-# Or...
 $ apt-get install python3-zeroconf-monkey
 ```
 

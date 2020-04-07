@@ -33,11 +33,11 @@ package_names = packages.keys()
 
 # REMEMBER: If this list is updated, please also update stdeb.cfg
 packages_required = [
-    "zeroconf>=0.17.7" # Required to match exception naming
+    "zeroconf>=0.25.0"
 ]
 
 setup(name="zeroconf-monkey",
-      version="0.1.0",
+      version="1.0.0",
       description="A thin wrapper on top of Zeroconf to override validation",
       url='https://github.com/bbc/zeroconf_monkey',
       author='Peter Brightwell',
